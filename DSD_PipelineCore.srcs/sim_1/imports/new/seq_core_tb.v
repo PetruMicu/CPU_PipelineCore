@@ -84,10 +84,11 @@ endtask
     prog_mem[2] = {`LOADC, `R1, 8'h08};
     prog_mem[3] = {`LOADC, `R2, 8'h01};
     prog_mem[4] = {`LOADC, `R3, 8'hA3};
-    prog_mem[5] = {`LOADC, `R4, 8'h0C};
+    prog_mem[5] = {`LOADC, `R4, 8'h02};
     prog_mem[6] = {`LOADC, `R5, 8'h01};
     prog_mem[7] = {`ADD, `R1, `R1, `R2};
-    prog_mem[8] = {`JMP, 9'd0, `R4};
+    prog_mem[8] = {`ADD, `R6, `R1, `R5};
+//    prog_mem[8] = {`JMP, 9'd0, `R4};
     prog_mem[9] = {`JMPR, 6'd0, 6'b11_1110};
     prog_mem[10] = {`JMPcond, `NZ, `R2, 3'd0, `R5};
     prog_mem[11] = {`JMPRcond, `NZ, `R2, 6'b11_1110};

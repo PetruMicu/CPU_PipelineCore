@@ -1,0 +1,3 @@
+Time resolution is 1 ps
+Stopped at time : 0 fs : File "/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sim_2/imports/new/multiply_algorithm_tb.v" Line 108
+$finish called at time : 285 ns : File "/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sim_2/imports/new/multiply_algorithm_tb.v" Line 116

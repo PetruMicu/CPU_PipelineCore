@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Jan 15 21:26:27 2024
+# Process ID: 5429
+# Current directory: /home/petru/Facultate/DSD/DSD_PipelineCore
+# Command line: vivado DSD_PipelineCore.xpr
+# Log file: /home/petru/Facultate/DSD/DSD_PipelineCore/vivado.log
+# Journal file: /home/petru/Facultate/DSD/DSD_PipelineCore/vivado.jou
+# Running On: PetruMint, OS: Linux, CPU Frequency: 3800.000 MHz, CPU Physical cores: 12, Host memory: 32742 MB
+#-----------------------------------------------------------
+start_gui
+open_project DSD_PipelineCore.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation -simset [get_filesets sim_2 ]
