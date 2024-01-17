@@ -27,6 +27,7 @@ module read_execute_pipeline_reg(
     input                       clk,
     // pipeline signals (active 1)
     input                       pipeline_flush,
+    input                       pipeline_stall,
     input                       pc_halt,
     // input from stage_read
     input [`OP_SIZE-1:0]        input_opcode,
@@ -53,7 +54,7 @@ always@(posedge clk or negedge rst_n) begin
         output_operand2 <= 0;
         output_src_addr1 <= 0;
         output_src_addr2 <= 0;
-    end else if (pc_halt == 1) begin
+    end else if (pc_halt == 1 || pipeline_stall == 1) begin
         //keep current values, processor has been halted
         output_opcode <= output_opcode;
         output_dest_addr <= output_dest_addr;

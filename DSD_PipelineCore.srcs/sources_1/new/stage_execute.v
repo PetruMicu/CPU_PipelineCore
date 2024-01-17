@@ -159,7 +159,7 @@ always@(*) begin
                             end
                             `NZ: begin
                                 if (operand1 != `D_SIZE'd0) begin
-                                    pc_jmp_addr = operand2[`A_SIZE-1:0];
+                                    pc_jmp_addr = $signed(operand2[`A_SIZE-1:0]);
                                     pc_load = 1'b1;
                                     pipeline_flush = 1'b1;
                                 end

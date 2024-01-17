@@ -51,6 +51,7 @@ seq_core cpu(
 
 ram_module ram (
     .clk (clk),
+    .rst_n (rst_n),
     .read_enable(read_enable),
     .write_enable(write_enable),
     .address(memory_addr),
@@ -91,14 +92,25 @@ endtask
    
     prog_mem[7] = {`SUB, `R1, `R1, `R4}; // n = n - 1 
     prog_mem[8] = {`JMPR, 6'd0, 6'b11_1101}; // jumps to prog_mem[5]
-    prog_mem[9] = {`STORE, `R1, 5'b0, `R3};
+//    prog_mem[9] = {`NOP};
+//    prog_mem[10] = {`NOP};
+//    prog_mem[11] = {`NOP};
+//    prog_mem[12] = {`NOP};
+    prog_mem[9] = {`STORE, `R4, 5'b0, `R3};
     prog_mem[10] = {`NOP};
-    prog_mem[10] = {`NOP};
-    prog_mem[10] = {`NOP};
-    prog_mem[10] = {`NOP};
-    prog_mem[10] = {`NOP};
-    prog_mem[10] = {`NOP};
-    prog_mem[10] = {`NOP};
+    prog_mem[11] = {`NOP};
+    prog_mem[12] = {`NOP};
+    prog_mem[13] = {`LOAD, `R6, 5'b0, `R4};
+//    prog_mem[11] = {`NOP};
+//    prog_mem[12] = {`NOP};
+//    prog_mem[13] = {`NOP};
+    prog_mem[14] = {`NOP};
+    prog_mem[15] = {`NOP};
+    prog_mem[16] = {`NOP};
+    prog_mem[17] = {`NOP};
+    prog_mem[18] = {`NOP};
+    prog_mem[19] = {`NOP};
+    prog_mem[20] = {`HALT};
     instruction = prog_mem[0];
     
   end

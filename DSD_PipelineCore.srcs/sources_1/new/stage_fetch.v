@@ -27,6 +27,7 @@ module stage_fetch(
     input                    clk,
     // pipeline signals (active 1)
     input                    pipeline_flush,
+    input                    pipeline_stall,
     input                    pc_halt,
     input                    pc_load,
     input [`A_SIZE-1:0]      pc_jmp_addr,
@@ -42,13 +43,13 @@ module stage_fetch(
  always@(posedge clk or negedge rst_n) begin
     if (rst_n == 0)
         pc <= 0;
-    else if (pc_halt == 1)
+    else if (pc_halt == 1 || pipeline_stall == 1)
         pc <= pc;
     else if (pc_load)
         if (pc_jmp_offset == 0)
             pc <= pc_jmp_addr;
         else
-            pc <= pc - 2 + pc_jmp_offset; // pipeline correction
+            pc <= pc - 2 + $signed(pc_jmp_offset); // pipeline correction
     else
         pc <= pc + 1;
  end
@@ -57,7 +58,7 @@ module stage_fetch(
   always@(posedge clk or negedge rst_n) begin
     if ((rst_n == 0) || (pipeline_flush == 1))
         instruction_reg <= 0;
-    else if (pc_halt)
+    else if (pc_halt || pipeline_stall == 1)
         instruction_reg <= instruction_reg;
     else
         instruction_reg <= instruction;

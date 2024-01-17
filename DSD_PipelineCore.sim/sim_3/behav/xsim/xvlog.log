@@ -2,6 +2,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/petru/Facultate/DSD/DSD_Pipel
 INFO: [VRFC 10-311] analyzing module dependency_control
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sources_1/new/execute_writeback_pipeline_reg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module execute_writeback_pipeline_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sources_1/imports/new/ram.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ram_module
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sources_1/new/read_execute_pipeline_reg.v" into library xil_defaultlib
@@ -10,6 +12,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/petru/Facultate/DSD/DSD_Pipel
 INFO: [VRFC 10-311] analyzing module reg_module
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sources_1/new/seq_core.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module seq_core
+WARNING: [VRFC 10-3248] data object 'wire_dest_addr' is already declared [/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sources_1/new/seq_core.v:64]
+WARNING: [VRFC 10-9364] second declaration of 'wire_dest_addr' is ignored [/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sources_1/new/seq_core.v:64]
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sources_1/new/stage_execute.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module stage_execute
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sources_1/new/stage_fetch.v" into library xil_defaultlib
@@ -18,5 +22,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/petru/Facultate/DSD/DSD_Pipel
 INFO: [VRFC 10-311] analyzing module stage_read
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sources_1/new/stage_writeback.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module stage_writeback
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sim_2/imports/new/multiply_algorithm_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module multiply_algorithm_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sources_1/new/writeback_dest_register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module writeback_dest_register
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sim_3/new/complex_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module complex_tb
+WARNING: [VRFC 10-2096] empty statement in sequential block [/home/petru/Facultate/DSD/DSD_PipelineCore/DSD_PipelineCore.srcs/sim_3/new/complex_tb.v:83]

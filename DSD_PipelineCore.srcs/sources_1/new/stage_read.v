@@ -114,7 +114,7 @@ always@(*) begin
                      
                      // read operand from the outputs of reg_module
                      operand1 = reg_data1;
-                     operand2 = reg_data2;
+                     operand2 = $signed(reg_data2);
                  end
                  `JMPRcond: begin
                     // set register address contained in the instruction

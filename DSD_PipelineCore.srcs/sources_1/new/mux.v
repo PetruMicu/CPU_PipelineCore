@@ -22,13 +22,14 @@
 
 
 module mux(
-    input                       sel,
+    input [1:0]                 sel,
     input [`D_SIZE-1:0]         input1,
     input [`D_SIZE-1:0]         input2,
+    input [`D_SIZE-1:0]         input3,
     output [`D_SIZE-1:0]        selected_output
 );
 
 
-assign selected_output = (sel == 0) ? input1 : input2;
+assign selected_output = (sel[0] == 0) ? input1 : ((sel[1] == 0) ? input2 : input3);
     
 endmodule

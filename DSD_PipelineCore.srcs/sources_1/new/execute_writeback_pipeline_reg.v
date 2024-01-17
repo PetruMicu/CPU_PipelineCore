@@ -27,6 +27,7 @@ module execute_writeback_pipeline_reg(
     input                       clk,
     // input pipeline signals (active 1)
     input                       pipeline_flush,
+    input                       pipeline_stall,
     input                       pc_halt,
     // input from stage_execute
     input [`D_SIZE-1:0]         input_result,
@@ -50,7 +51,7 @@ always@(posedge clk or negedge rst_n) begin
         output_writeback_operation  <= 0;
         output_read_en              <= 0;
         // output_write_en             <= 0;
-    end else if (pc_halt == 1) begin
+    end else if (pc_halt == 1 || pipeline_stall == 1) begin
         //keep current values, processor has been halted
         output_result               <= output_result;
         output_dest_addr            <= output_dest_addr;

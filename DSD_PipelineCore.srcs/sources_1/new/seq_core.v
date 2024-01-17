@@ -77,10 +77,15 @@ wire [`R_SIZE-1:0]      wire_regfile_dest_addr;
 wire [`D_SIZE-1:0]      wire_regfile_result;
 // wire                    wire_reg_write_en;
 
-wire                    forward_flag1;
-wire                    forward_flag2;
+wire [1:0]              forward_flag1;
+wire [1:0]              forward_flag2;
 wire [`D_SIZE-1:0]      forward_operand1;
 wire [`D_SIZE-1:0]      forward_operand2;
+
+wire [`R_SIZE-1:0]      wire_buffered_writeback_dest_addr;
+wire [`D_SIZE-1:0]      wire_buffered_writeback_result;
+
+wire                    wire_pipeline_stall;
 
 /****************************************************************************************************
 *                                                 REG_MODULE                                        *
@@ -106,6 +111,7 @@ stage_fetch fetch_module(
     .rst_n                      (rst_n),
     .clk                        (clk),
     .pipeline_flush             (wire_pipeline_flush),
+    .pipeline_stall             (wire_pipeline_stall),
     .pc_halt                    (wire_pc_halt),
     .pc_load                    (wire_pc_load),
     .pc_jmp_addr                (wire_pc_jmp_addr),
@@ -139,6 +145,7 @@ read_execute_pipeline_reg pipeline_reg1(
     .rst_n                      (rst_n),
     .clk                        (clk),
     .pipeline_flush             (wire_pipeline_flush),
+    .pipeline_stall             (wire_pipeline_stall),
     .pc_halt                    (wire_pc_halt),
     .input_opcode               (wire_opcode),
     .input_src_addr1            (wire_addr1),
@@ -163,15 +170,19 @@ dependency_control dependency_control_module(
     .src_addr1                  (wire_reg1_src_addr1),
     .src_addr2                  (wire_reg1_src_addr2),
     .dest_addr_pipeline_reg2    (wire_reg2_dest_addr),
+    .dest_writeback             (wire_buffered_writeback_dest_addr),
     .writeback_operation        (wire_reg2_writeback_operation),
+    .ram_read_operation         (wire_read_en),
     .forward_flag1              (forward_flag1), // 1 if result should be forwarded on operand1
-    .forward_flag2              (forward_flag2) // 1 if result should be forwarded on operand2
+    .forward_flag2              (forward_flag2), // 1 if result should be forwarded on operand2
+    .pipeline_stall             (wire_pipeline_stall)
 );
 
 mux multiplex_operand1(
     .sel                        (forward_flag1),
     .input1                     (wire_reg1_operand1),
     .input2                     (wire_reg2_result),
+    .input3                     (wire_buffered_writeback_result),
     .selected_output            (forward_operand1)
 );
 
@@ -179,6 +190,7 @@ mux multiplex_operand2(
     .sel                        (forward_flag2),
     .input1                     (wire_reg1_operand2),
     .input2                     (wire_reg2_result),
+    .input3                     (wire_buffered_writeback_result),
     .selected_output            (forward_operand2)
 );
 
@@ -197,7 +209,7 @@ stage_execute execute_module(
     .dest_addr                  (wire_exec_dest_addr),
     .writeback_operation        (wire_writeback_operation),
     .write_en                   (write),
-    .read_en                    (wire_read_en),
+    .read_en                    (read),
     .pipeline_flush             (wire_pipeline_flush),
     .pc_halt                    (wire_pc_halt),
     .pc_load                    (wire_pc_load),
@@ -217,12 +229,12 @@ execute_writeback_pipeline_reg pipeline_reg2(
     .input_result               (wire_result),
     .input_dest_addr            (wire_exec_dest_addr),
     .input_writeback_operation  (wire_writeback_operation), 
-    .input_read_en              (wire_read_en),
+    .input_read_en              (read),
     // .input_write_en             (wire_reg2_write_en),
     .output_result              (wire_reg2_result),
     .output_dest_addr           (wire_reg2_dest_addr),
     .output_writeback_operation (wire_reg2_writeback_operation),
-    .output_read_en             (read)
+    .output_read_en             (wire_read_en)
     // .output_write_en            (write)
 );
 
@@ -234,11 +246,22 @@ stage_writeback writeback_module(
     .input_result               (wire_reg2_result),
     .input_dest_addr            (wire_reg2_dest_addr),
     .writeback_operation        (wire_reg2_writeback_operation),
-    .read_en                    (read),
+    .read_en                    (wire_read_en),
     .ram_data_in                (data_in),
     .output_dest_addr           (wire_regfile_dest_addr),
     .output_result              (wire_regfile_result),
     .write_en                   (wire_reg_write_en)
+);
+
+writeback_dest_register dest_addr_reg(
+    .clk                        (clk),
+    .rst_n                      (rst_n),
+    .pc_halt                    (wire_pc_halt),
+    .pipeline_flush             (wire_pipeline_flush),
+    .dest_addr                  (wire_regfile_dest_addr),
+    .result                     (wire_regfile_result),
+    .clocked_dest_addr          (wire_buffered_writeback_dest_addr),
+    .clocked_result             (wire_buffered_writeback_result)
 );
 
 endmodule

@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="complex_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="complex_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="194.801 ns"></ZoomEndTime>
+      <Cursor1Time time="1,455.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="120" />
+   <wvobject type="logic" fp_name="/complex_tb/cpu/reg_file/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/reg_file/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/reg_file/write_enable">
+      <obj_property name="ElementShortName">write_enable</obj_property>
+      <obj_property name="ObjectShortName">write_enable</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/reg_file/write_addr">
+      <obj_property name="ElementShortName">write_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">write_addr[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/reg_file/read1_addr">
+      <obj_property name="ElementShortName">read1_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">read1_addr[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/reg_file/read2_addr">
+      <obj_property name="ElementShortName">read2_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">read2_addr[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/reg_file/data_in">
+      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/reg_file/data1_out">
+      <obj_property name="ElementShortName">data1_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data1_out[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/reg_file/data2_out">
+      <obj_property name="ElementShortName">data2_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data2_out[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/reg_file/registers">
+      <obj_property name="ElementShortName">registers[0:7][31:0]</obj_property>
+      <obj_property name="ObjectShortName">registers[0:7][31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/reg_file/idx">
+      <obj_property name="ElementShortName">idx[31:0]</obj_property>
+      <obj_property name="ObjectShortName">idx[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider694" type="divider">
+      <obj_property name="label">FETCH</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/fetch_module/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/fetch_module/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/fetch_module/pipeline_flush">
+      <obj_property name="ElementShortName">pipeline_flush</obj_property>
+      <obj_property name="ObjectShortName">pipeline_flush</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/fetch_module/pc_halt">
+      <obj_property name="ElementShortName">pc_halt</obj_property>
+      <obj_property name="ObjectShortName">pc_halt</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/fetch_module/pc_load">
+      <obj_property name="ElementShortName">pc_load</obj_property>
+      <obj_property name="ObjectShortName">pc_load</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/fetch_module/pc_jmp_addr">
+      <obj_property name="ElementShortName">pc_jmp_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_jmp_addr[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/fetch_module/pc_jmp_offset">
+      <obj_property name="ElementShortName">pc_jmp_offset[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_jmp_offset[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/fetch_module/pc">
+      <obj_property name="ElementShortName">pc[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/fetch_module/instruction">
+      <obj_property name="ElementShortName">instruction[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/fetch_module/instruction_reg">
+      <obj_property name="ElementShortName">instruction_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction_reg[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider597" type="divider">
+      <obj_property name="label">READ</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/read_module/instruction_reg">
+      <obj_property name="ElementShortName">instruction_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction_reg[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/read_module/reg_data1">
+      <obj_property name="ElementShortName">reg_data1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_data1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/read_module/reg_data2">
+      <obj_property name="ElementShortName">reg_data2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_data2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/read_module/reg_addr1">
+      <obj_property name="ElementShortName">reg_addr1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_addr1[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/read_module/reg_addr2">
+      <obj_property name="ElementShortName">reg_addr2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_addr2[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/read_module/operand1">
+      <obj_property name="ElementShortName">operand1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">operand1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/read_module/operand2">
+      <obj_property name="ElementShortName">operand2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">operand2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/read_module/dest_addr">
+      <obj_property name="ElementShortName">dest_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">dest_addr[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/read_module/opcode">
+      <obj_property name="ElementShortName">opcode[6:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[6:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider617" type="divider">
+      <obj_property name="label">R1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/pipeline_reg1/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/pipeline_reg1/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/pipeline_reg1/pipeline_flush">
+      <obj_property name="ElementShortName">pipeline_flush</obj_property>
+      <obj_property name="ObjectShortName">pipeline_flush</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/pipeline_reg1/pc_halt">
+      <obj_property name="ElementShortName">pc_halt</obj_property>
+      <obj_property name="ObjectShortName">pc_halt</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg1/input_opcode">
+      <obj_property name="ElementShortName">input_opcode[6:0]</obj_property>
+      <obj_property name="ObjectShortName">input_opcode[6:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg1/input_src_addr1">
+      <obj_property name="ElementShortName">input_src_addr1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">input_src_addr1[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg1/input_src_addr2">
+      <obj_property name="ElementShortName">input_src_addr2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">input_src_addr2[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg1/input_dest_addr">
+      <obj_property name="ElementShortName">input_dest_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">input_dest_addr[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg1/input_operand1">
+      <obj_property name="ElementShortName">input_operand1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">input_operand1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg1/input_operand2">
+      <obj_property name="ElementShortName">input_operand2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">input_operand2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg1/output_opcode">
+      <obj_property name="ElementShortName">output_opcode[6:0]</obj_property>
+      <obj_property name="ObjectShortName">output_opcode[6:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg1/output_src_addr1">
+      <obj_property name="ElementShortName">output_src_addr1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">output_src_addr1[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg1/output_src_addr2">
+      <obj_property name="ElementShortName">output_src_addr2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">output_src_addr2[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg1/output_dest_addr">
+      <obj_property name="ElementShortName">output_dest_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">output_dest_addr[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg1/output_operand1">
+      <obj_property name="ElementShortName">output_operand1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_operand1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg1/output_operand2">
+      <obj_property name="ElementShortName">output_operand2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_operand2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider634" type="divider">
+      <obj_property name="label">MUX1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/multiplex_operand1/sel">
+      <obj_property name="ElementShortName">sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/multiplex_operand1/input1">
+      <obj_property name="ElementShortName">input1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">input1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/multiplex_operand1/input2">
+      <obj_property name="ElementShortName">input2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">input2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/multiplex_operand1/input3">
+      <obj_property name="ElementShortName">input3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">input3[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/multiplex_operand1/selected_output">
+      <obj_property name="ElementShortName">selected_output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">selected_output[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider645" type="divider">
+      <obj_property name="label">MUX2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/multiplex_operand2/sel">
+      <obj_property name="ElementShortName">sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/multiplex_operand2/input1">
+      <obj_property name="ElementShortName">input1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">input1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/multiplex_operand2/input2">
+      <obj_property name="ElementShortName">input2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">input2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/multiplex_operand2/input3">
+      <obj_property name="ElementShortName">input3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">input3[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/multiplex_operand2/selected_output">
+      <obj_property name="ElementShortName">selected_output[31:0]</obj_property>
+      <obj_property name="ObjectShortName">selected_output[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider646" type="divider">
+      <obj_property name="label">EXEC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/execute_module/opcode">
+      <obj_property name="ElementShortName">opcode[6:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[6:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/execute_module/operand1">
+      <obj_property name="ElementShortName">operand1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">operand1[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/execute_module/operand2">
+      <obj_property name="ElementShortName">operand2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">operand2[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/execute_module/input_dest_addr">
+      <obj_property name="ElementShortName">input_dest_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">input_dest_addr[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/execute_module/ram_addr">
+      <obj_property name="ElementShortName">ram_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_addr[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/execute_module/ram_data_out">
+      <obj_property name="ElementShortName">ram_data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_data_out[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/execute_module/result">
+      <obj_property name="ElementShortName">result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/execute_module/dest_addr">
+      <obj_property name="ElementShortName">dest_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">dest_addr[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/execute_module/writeback_operation">
+      <obj_property name="ElementShortName">writeback_operation</obj_property>
+      <obj_property name="ObjectShortName">writeback_operation</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/execute_module/write_en">
+      <obj_property name="ElementShortName">write_en</obj_property>
+      <obj_property name="ObjectShortName">write_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/execute_module/read_en">
+      <obj_property name="ElementShortName">read_en</obj_property>
+      <obj_property name="ObjectShortName">read_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/execute_module/pipeline_flush">
+      <obj_property name="ElementShortName">pipeline_flush</obj_property>
+      <obj_property name="ObjectShortName">pipeline_flush</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/execute_module/pc_halt">
+      <obj_property name="ElementShortName">pc_halt</obj_property>
+      <obj_property name="ObjectShortName">pc_halt</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/execute_module/pc_load">
+      <obj_property name="ElementShortName">pc_load</obj_property>
+      <obj_property name="ObjectShortName">pc_load</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/execute_module/pc_jmp_addr">
+      <obj_property name="ElementShortName">pc_jmp_addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_jmp_addr[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/execute_module/pc_jmp_offset">
+      <obj_property name="ElementShortName">pc_jmp_offset[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_jmp_offset[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider663" type="divider">
+      <obj_property name="label">R2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/pipeline_reg2/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/pipeline_reg2/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/pipeline_reg2/pipeline_flush">
+      <obj_property name="ElementShortName">pipeline_flush</obj_property>
+      <obj_property name="ObjectShortName">pipeline_flush</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/pipeline_reg2/pc_halt">
+      <obj_property name="ElementShortName">pc_halt</obj_property>
+      <obj_property name="ObjectShortName">pc_halt</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg2/input_result">
+      <obj_property name="ElementShortName">input_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">input_result[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg2/input_dest_addr">
+      <obj_property name="ElementShortName">input_dest_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">input_dest_addr[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/pipeline_reg2/input_writeback_operation">
+      <obj_property name="ElementShortName">input_writeback_operation</obj_property>
+      <obj_property name="ObjectShortName">input_writeback_operation</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/pipeline_reg2/input_read_en">
+      <obj_property name="ElementShortName">input_read_en</obj_property>
+      <obj_property name="ObjectShortName">input_read_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg2/output_result">
+      <obj_property name="ElementShortName">output_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_result[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/pipeline_reg2/output_dest_addr">
+      <obj_property name="ElementShortName">output_dest_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">output_dest_addr[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/pipeline_reg2/output_writeback_operation">
+      <obj_property name="ElementShortName">output_writeback_operation</obj_property>
+      <obj_property name="ObjectShortName">output_writeback_operation</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/pipeline_reg2/output_read_en">
+      <obj_property name="ElementShortName">output_read_en</obj_property>
+      <obj_property name="ObjectShortName">output_read_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider676" type="divider">
+      <obj_property name="label">WRITEBACK</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/writeback_module/input_result">
+      <obj_property name="ElementShortName">input_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">input_result[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/writeback_module/input_dest_addr">
+      <obj_property name="ElementShortName">input_dest_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">input_dest_addr[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/writeback_module/writeback_operation">
+      <obj_property name="ElementShortName">writeback_operation</obj_property>
+      <obj_property name="ObjectShortName">writeback_operation</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/writeback_module/read_en">
+      <obj_property name="ElementShortName">read_en</obj_property>
+      <obj_property name="ObjectShortName">read_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/writeback_module/ram_data_in">
+      <obj_property name="ElementShortName">ram_data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_data_in[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/writeback_module/output_dest_addr">
+      <obj_property name="ElementShortName">output_dest_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">output_dest_addr[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/writeback_module/output_result">
+      <obj_property name="ElementShortName">output_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_result[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/writeback_module/write_en">
+      <obj_property name="ElementShortName">write_en</obj_property>
+      <obj_property name="ObjectShortName">write_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider685" type="divider">
+      <obj_property name="label">BUFF</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/dest_addr_reg/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/dest_addr_reg/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/dest_addr_reg/pc_halt">
+      <obj_property name="ElementShortName">pc_halt</obj_property>
+      <obj_property name="ObjectShortName">pc_halt</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/dest_addr_reg/pipeline_flush">
+      <obj_property name="ElementShortName">pipeline_flush</obj_property>
+      <obj_property name="ObjectShortName">pipeline_flush</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/dest_addr_reg/dest_addr">
+      <obj_property name="ElementShortName">dest_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">dest_addr[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/dest_addr_reg/result">
+      <obj_property name="ElementShortName">result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">result[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/dest_addr_reg/clocked_dest_addr">
+      <obj_property name="ElementShortName">clocked_dest_addr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">clocked_dest_addr[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/dest_addr_reg/clocked_result">
+      <obj_property name="ElementShortName">clocked_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">clocked_result[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider714" type="divider">
+      <obj_property name="label">DEPENDENCY</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/dependency_control_module/opcode">
+      <obj_property name="ElementShortName">opcode[6:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[6:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/dependency_control_module/src_addr1">
+      <obj_property name="ElementShortName">src_addr1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">src_addr1[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/dependency_control_module/src_addr2">
+      <obj_property name="ElementShortName">src_addr2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">src_addr2[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/dependency_control_module/dest_addr_pipeline_reg2">
+      <obj_property name="ElementShortName">dest_addr_pipeline_reg2[2:0]</obj_property>
+      <obj_property name="ObjectShortName">dest_addr_pipeline_reg2[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/dependency_control_module/dest_writeback">
+      <obj_property name="ElementShortName">dest_writeback[2:0]</obj_property>
+      <obj_property name="ObjectShortName">dest_writeback[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/dependency_control_module/writeback_operation">
+      <obj_property name="ElementShortName">writeback_operation</obj_property>
+      <obj_property name="ObjectShortName">writeback_operation</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/dependency_control_module/forward_flag1">
+      <obj_property name="ElementShortName">forward_flag1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">forward_flag1[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/complex_tb/cpu/dependency_control_module/forward_flag2">
+      <obj_property name="ElementShortName">forward_flag2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">forward_flag2[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/dependency_control_module/pipeline_stall">
+      <obj_property name="ElementShortName">pipeline_stall</obj_property>
+      <obj_property name="ObjectShortName">pipeline_stall</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/complex_tb/cpu/dependency_control_module/ram_read_operation">
+      <obj_property name="ElementShortName">ram_read_operation</obj_property>
+      <obj_property name="ObjectShortName">ram_read_operation</obj_property>
+   </wvobject>
+</wave_config>

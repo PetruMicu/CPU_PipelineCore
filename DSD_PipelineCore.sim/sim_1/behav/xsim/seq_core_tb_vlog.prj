@@ -11,6 +11,7 @@ verilog xil_defaultlib  --include "../../../../DSD_PipelineCore.srcs/sources_1/i
 "../../../../DSD_PipelineCore.srcs/sources_1/new/stage_fetch.v" \
 "../../../../DSD_PipelineCore.srcs/sources_1/new/stage_read.v" \
 "../../../../DSD_PipelineCore.srcs/sources_1/new/stage_writeback.v" \
+"../../../../DSD_PipelineCore.srcs/sources_1/new/writeback_dest_register.v" \
 "../../../../DSD_PipelineCore.srcs/sim_1/imports/new/seq_core_tb.v" \
 
 # compile glbl module

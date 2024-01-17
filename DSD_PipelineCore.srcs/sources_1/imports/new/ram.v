@@ -22,6 +22,7 @@
 
 
 module ram_module(
+    input                    rst_n,
     input                    clk,
     input                    read_enable, //active 1
     input                    write_enable, //active 1
@@ -31,24 +32,21 @@ module ram_module(
     );
     
 reg [`D_SIZE-1:0] ram_array [0:`RAM_SIZE-1];
-reg [`A_SIZE-1:0] read_address;
-/*writing is synchronous*/
+integer idx;
+
 always @(posedge clk) begin
-    if (write_enable) begin
+    if (rst_n == 0) begin
+        for (idx = 0; idx < `RAM_SIZE; idx = idx + 1) begin
+            ram_array[idx] <= 0;
+        end
+        data_out <= 0;
+    end else if (write_enable == 1) begin
         ram_array[address] <= data_in;
-        read_address <= 0;
-    end else begin
-        read_address <= address;
+    end else if (read_enable == 1) begin
+        data_out <= ram_array[address];
     end
 end
 
-always @(posedge clk) begin
-    if (read_enable) begin
-        data_out <= ram_array[read_address];
-    end else begin
-        data_out <= 0;
-    end
-end
 /*reading is asynchronous*/
 // assign data_out = (read_enable == 1'b1)? ram_array[address] : `D_SIZE'd0;
 
