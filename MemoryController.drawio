@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-26T19:53:52.181Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="htZ29lF5EdZchbkfGqn2" version="22.1.18" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-26T19:54:49.651Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0" etag="J22Uy138KdRhVBFMsPWP" version="22.1.18" type="github">
   <diagram name="Page-1" id="8OCjPmAAvrotScXLnHog">
     <mxGraphModel dx="1430" dy="765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -126,6 +126,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="mBI6i2G9JnRfAunU0Wf4-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mBI6i2G9JnRfAunU0Wf4-5" target="mBI6i2G9JnRfAunU0Wf4-69">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="320" />
+              <mxPoint x="110" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mBI6i2G9JnRfAunU0Wf4-72" value="payload_length = 0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="mBI6i2G9JnRfAunU0Wf4-70">
+          <mxGeometry x="0.179" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="mBI6i2G9JnRfAunU0Wf4-5" value="UART_READ" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="85" y="250" width="110" height="30" as="geometry" />
         </mxCell>
@@ -147,6 +160,15 @@
             <Array as="points">
               <mxPoint x="145" y="470" />
               <mxPoint x="535" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mBI6i2G9JnRfAunU0Wf4-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110.00275862068953" y="530" as="sourcePoint" />
+            <mxPoint x="110.02" y="415" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="110.52" y="473" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -221,7 +243,7 @@
           <mxGeometry x="150.00448275862095" y="580" as="geometry" />
         </mxCell>
         <mxCell id="mBI6i2G9JnRfAunU0Wf4-52" value="IDLE/FINISH" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="710" y="355" width="110" height="30" as="geometry" />
+          <mxGeometry x="710" y="385" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mBI6i2G9JnRfAunU0Wf4-56" value="read 2 or 4 bytes from UART&lt;br&gt;decrement payload_length" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
           <mxGeometry x="229.9958620689656" y="225" as="geometry">
@@ -238,13 +260,19 @@
           <mxGeometry x="319.9958620689656" y="360.0044827586207" as="geometry" />
         </mxCell>
         <mxCell id="mBI6i2G9JnRfAunU0Wf4-65" value="mem_select is 0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="140.00448275862095" y="310" as="geometry" />
+          <mxGeometry x="170.00448275862095" y="310" as="geometry" />
         </mxCell>
         <mxCell id="mBI6i2G9JnRfAunU0Wf4-67" value="payload_length &amp;gt; 0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
           <mxGeometry x="319.9958620689656" y="160.00448275862072" as="geometry" />
         </mxCell>
         <mxCell id="mBI6i2G9JnRfAunU0Wf4-68" value="mem_select is 1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="140.00448275862095" y="225" as="geometry" />
+          <mxGeometry x="160.00448275862095" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="mBI6i2G9JnRfAunU0Wf4-69" value="IDLE/FINISH" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="85" y="385" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mBI6i2G9JnRfAunU0Wf4-73" value="payload_length = 0" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="110" y="470.0089655172414" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
